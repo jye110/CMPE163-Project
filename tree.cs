@@ -140,18 +140,6 @@ public class line : MonoBehaviour {
     
     // Update is called once per frame
     void Update () {
-        // for(int i = 0; i < points.Length; i++) {
-        //     // Move the ring to the point
-        //     this.ringGameObjects[i].transform.position = this.points[i].transform.position;
 
-        //     // Match the scale to the distance
-        //     float cylinderDistance = 0.5f*Vector3.Distance(this.points[i].transform.position, this.mainPoint.transform.position);
-        //     this.ringGameObjects[i].transform.localScale = new Vector3(this.ringGameObjects[i].transform.localScale.x, cylinderDistance, this.ringGameObjects[i].transform.localScale.z);
-
-        //     // Make the cylinder look at the main point.
-        //     // Since the cylinder is pointing up(y) and the forward is z, we need to offset by 90 degrees.
-        //     this.ringGameObjects[i].transform.LookAt(this.mainPoint.transform, Vector3.up);
-        //     this.ringGameObjects[i].transform.rotation *= Quaternion.Euler(90, 0, 0);
-        // }
     }
 }
