@@ -11,6 +11,7 @@ public class tree : MonoBehaviour {
     public float branch_ratio = .25f;
     public float leaf_length_ratio= .9f;
     public float side_angle = 35f;
+    public int layer = 3;
 
     private const float PI = 3.14159265f;
 
@@ -20,14 +21,6 @@ public class tree : MonoBehaviour {
 
     //for drawing line
     void DrawLine(Vector3 start_pt, Vector3 end_pt){
-        // this.ringGameObjects = new GameObject[points.Length];
-        // //this.connectingRings = new ProceduralRing[points.Length];
-        // for(int i = 0; i < points.Length; i++) {
-        //     // Make a gameobject that we will put the ring on
-        //     // And then put it as a child on the gameobject that has this Command and Control script
-        //     this.ringGameObjects[i] = new GameObject();
-        //     this.ringGameObjects[i].name = "Connecting ring #" + i;
-        //     this.ringGameObjects[i].transform.parent = this.gameObject.transform;
 
             // We make a offset gameobject to counteract the default cylindermesh pivot/origin being in the middle
             GameObject CylinderMeshObject = new GameObject();
@@ -134,7 +127,7 @@ public class tree : MonoBehaviour {
 
         p0 = new Vector3(p1.x, p1.y * (1-branch_ratio), p1.z);
         //tree leaves
-        DrawBranch(p0, p1);
+        DrawBranch(p0, p1, layer);
 
     }
     
