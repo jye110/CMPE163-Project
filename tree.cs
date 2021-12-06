@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class line : MonoBehaviour {
+public class tree : MonoBehaviour {
 
     // Material used for the connecting lines
     public Material lineMat;
