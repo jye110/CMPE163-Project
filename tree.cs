@@ -101,18 +101,15 @@ public class tree : MonoBehaviour {
         //middle
         p2 = new Vector3(p1.x + leaf_length_ratio*dir.x, p1.y + leaf_length_ratio*dir.y, p1.z + leaf_length_ratio*dir.z);
         DrawLine(p1,p2);
-        print("layer = " + layer + " p1 =" + p1 + " p2 = " + p2);
         DrawBranch(p1, p2, layer - 1);
 
         //left leaf
         new_p2 = compute(p1,p2,side_angle);
-        print("layer = " + layer + " left pt=" + new_p2);
         DrawLine(p1, new_p2);
         DrawBranch(p1, new_p2, layer - 1);
 
         //right leaf
         new_p2 = compute(p1,p2,-side_angle);
-        print("layer = " + layer + " right pt =" + new_p2);
         DrawLine(p1, new_p2);
         DrawBranch(p1, new_p2, layer - 1);
     }
